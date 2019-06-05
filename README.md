@@ -7,7 +7,7 @@
 4. You can move your rovers by calling the commands method. Commands accepts a string with the following possibilities: 'F' moves the rover forward by one space, 'B' moves it backward by one space, 'N', 'E', 'S' and 'W' turns it to the north, east, south and west, respectively. Any other characters will log as 'Not a possible command' to the console.
 5. When more than one rover is present, if they run into each other, there will be a warning on the console telling so and the rover will not take that movement.
 6. You will always see the path traveled by the rover through its travelLog property, which accumulates all attempted movements and is logged after each command character.
-7. By default, there are no obstacles on the grid but you can add them by changing the grid variable in the .js file and entering an 'X' on one of the available positions. Same as finding another rover, it will not move and log the event to your console.
+7. By default, there the whole third column on the grid is filled with obstacles. You can add more or move them by changing the 'X' values for 0 (and vice-versa). Same as finding another rover, it will not move and log the event to your console.
 8. In case you reach one of the four edges of the grid, the rover will also not move and tell you an edge has been reached.
 
 Have fun!
