@@ -3,10 +3,11 @@
 ### How to use it
 1. Clone the repository to your computer.
 2. Open index.html in your preferred browser and open up the console to see it running.
-3. The program invokes the turnBasedCommands function by default (as per l294). This prompts an user input that will be used to control each of the three rovers, one at a time.
-4. The function accepts the following arguments:
-  'F' to move the rover forward, 'B' to move it backwards, 'E', 'W', 'N', 'S' to turn the rover East, West, North or South, respectively.
-5. Commands can be issued as a single string, such as FWFFSFFEB (forward, turn west, forward, forward, turn south, forward, forward, turn east, backward).
-6. The rovers will move over a 10x10 grid with some obstacles, marked 'X' in the grid variable (l29). If it hits an obstacle, another rover or tries to move over the edge, the program will log the attempt on the rover's travelLog property and the rover will stand still.
-7. Another way to control the rovers is with the commands(rover, comString) function. For instance, commands(rover[0], 'ff') will move Rover 1 forward twice.
-8. Have fun!
+3. The program starts with a single rover (named Rover1). You can create more rovers by instantiating the Rover class, which accepts 4 arguments: Name, X Position (on a 10x10 grid), Y Position and Initial Direction the rover faces (which defaults to 'N', North, when not specified).
+4. You can move your rovers by calling the commands method. Commands accepts a string with the following possibilities: 'F' moves the rover forward by one space, 'B' moves it backward by one space, 'N', 'E', 'S' and 'W' turns it to the north, east, south and west, respectively. Any other characters will log as 'Not a possible command' to the console.
+5. When more than one rover is present, if they run into each other, there will be a warning on the console telling so and the rover will not take that movement.
+6. You will always see the path traveled by the rover through its travelLog property, which accumulates all attempted movements and is logged after each command character.
+7. By default, there are no obstacles on the grid but you can add them by changing the grid variable in the .js file and entering an 'X' on one of the available positions. Same as finding another rover, it will not move and log the event to your console.
+8. In case you reach one of the four edges of the grid, the rover will also not move and tell you an edge has been reached.
+
+Have fun!
